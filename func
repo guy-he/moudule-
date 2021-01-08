@@ -10,70 +10,50 @@ public class Main {
                 Scanner s = new Scanner(System.in);
                 Random r = new Random();
 
+           /*
 
-                wakeUpInTheMorning();
-                driveToWork();
-                goToDinner();
-                getNameAndGreet(s);
-                doWomeWork();
-                driveToWork();
-                tenRandoms();
-                inputArrsyFromUser();
+Targil:
+1. Create a function that prints "hello world" , call it from main
+2. Create a function that prints all numbers from 1 to 100, call it from main
+3. Create a function that inputs a number and prints if the number is even (zugi) or not, call it from main
+            */
 
+
+           helloWorld();
+           prints1To100();
+           zugiOrNot();
+            }
+
+    private static void zugiOrNot() {
+        Scanner s = new Scanner(System.in);
+        System.out.println("type a number");
+        int number = s.nextInt();
+        if (number % 2 == 0){
+            System.out.println("even!");
 
         }
-
-        private static void inputArrsyFromUser() {
-                Scanner s = new Scanner(System.in);
-                int[] arrayuser = new int[10];
-                int sum = 0;
-                for (int index = 0; index < 10; index++)
-                {
-                        System.out.println("enter numbers");
-                        arrayuser[index] = s.nextInt();
-                        sum = sum + arrayuser[index];
-                        }
-                double avg = sum / arrayuser.length;
-                System.out.println(avg);
-                }
-
-
-        private static void tenRandoms() {
-
-                Random r = new Random();
-             int[] arr = new int[10];
-                for (int index = 0; index < 10; index++){
-                        arr[index] = r.nextInt(100);
-                        System.out.println(arr[index]);
-
-                }
+            else {
+            System.out.println("odd!");
         }
 
-        private static void getNameAndGreet(Scanner s) {
-                String name = s.next();
-                System.out.println(String.format("hello, %s how are you?", name));
-        }
 
-        private static void goToDinner() {
-                System.out.println("order a fish");
-        }
+    }
 
-        private static void driveToWork() {
-                System.out.println("dont pass the speed limit");
-        }
+    private static void prints1To100() {
+            int[] array100 = new int[100];
+            int count = 0;
+            for (int index = 0; index < array100.length; index++){
+                count++;
+                System.out.println(array100[index] + count);
+            }
 
-        private static void wakeUpInTheMorning() {
-                System.out.println("no power!");
-        }
+    }
 
-        private static void doWomeWork(){
-        System.out.println("ask itay for help");
-}
+    private static void helloWorld() {
+        System.out.println("Hello world");
+    }
 
 }
-
-
-
 
 
 
