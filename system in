@@ -1,0 +1,38 @@
+package com.company;
+
+import java.lang.module.FindException;
+import java.util.Random;
+import java.util.Scanner;
+
+public class Main {
+
+
+           private static void multiply2Numbers(int num1, int num2){
+               System.out.println(String.format("%d * %d = %d",num1, num2, num1*num2 ));
+           }
+             private static void minus(int number1, int number2){
+                 System.out.println(String.format("%d - %d = %d", number1, number2, number1-number2));
+             }
+
+             private static void division(int div1, int div2) {
+                 if (div2 == 0) {
+                     System.out.println("cannot divide by zero");
+                 } else {
+                     System.out.println(String.format("%d / %d = %f", div1, div2, (float) div1 / div2 ));;
+
+                 }
+             }
+
+        public static void main(String[] args) {
+                Scanner s = new Scanner(System.in);
+                Random r = new Random();
+
+            System.out.println("please enter 1st number");
+              int number1 = s.nextInt();
+            System.out.println("please enter 2nd number");
+            int number2 = s.nextInt();
+               multiply2Numbers(number1, number2);
+            division(number1, number2);
+               minus(number1, number2);
+                }
+            }
