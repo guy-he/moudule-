@@ -1,0 +1,158 @@
+package com.company;
+
+import java.lang.module.FindException;
+import java.util.Random;
+import java.util.Scanner;
+
+public class Main {
+
+            private static void arrayOfStringsInOneLine(String[] array){
+                         for (int index = 0; index < array.length; index++){
+                             System.out.print(array[index]+ " ");
+                         }
+                     }
+            private static void calcAvgArray(int[] avg){
+                          int sum = 0;
+                          for (int index = 0; index < avg.length; index++){
+                              sum = sum + avg[index];
+
+
+                          }
+                          System.out.println(sum / avg.length);
+                      }
+            private static void myCompare(String s1, String s2 ){
+                        if (s1.equals(s2)){
+                            System.out.println("equals!");
+                        }
+                        else {
+                            System.out.println("not equals!!!");
+                        }
+                    }
+            private static void zeroArr(int[] fnArr){
+                for (int index = 0; index < fnArr.length; index++){
+                    fnArr[index] = 0;
+                    System.out.println(fnArr[index]);
+                }
+            }
+            private static void printArr(int[] fnArr){
+                for (int index = 0; index < fnArr.length; index++){
+                    System.out.println(fnArr[index]);
+                }
+            }
+            private static void myCalc(String s, int a, int b ){
+                switch (s){
+                    case "+":
+                        System.out.println(String.format("%d + %d = %d", a, b, a+b));
+                        break;
+                    case "-":
+                        System.out.println(String.format("%d - %d = %d", a, b, a- b));
+                      break;
+                    case "*":
+                        System.out.println(String.format(" %d * %d = %d", a, b, a*b ));
+                    case "/":
+                        System.out.println(String.format("%d / %d = %f", a, b,(float) a/b));
+                }
+
+            }
+            private static void myAdd(int a, int b){
+                System.out.println(String.format(" %d + %d = %d", a, b, a+b));
+            }
+            private static void myAdd(int a){
+                System.out.println(a);
+            }
+            private static void myAdd() {
+                System.out.println(0);
+            }
+            private static void multiply2Numbers(int num1, int num2){
+               System.out.println(String.format("%d * %d = %d",num1, num2, num1*num2 ));
+           }
+            private static void minus(int number1, int number2){
+                 System.out.println(String.format("%d - %d = %d", number1, number2, number1-number2));
+             }
+            private static void division(int div1, int div2) {
+                 if (div2 == 0) {
+                     System.out.println("cannot divide by zero");
+                 } else {
+                     System.out.println(String.format("%d / %d = %f", div1, div2, (float) div1 / div2 ));;
+
+                 }
+             }
+            private static void pow(double a, double b){
+                    System.out.println(String.format("%f ^ %f = %f ", a, b, Math.pow(a, b)));
+                }
+            private static void pow(double a, double b, double c, double d){
+                     System.out.println(String.format("%f ^ %f = %f , %f ^ %f = %f", a, b, Math.pow(a, b), c, d, Math.pow(c, d)));
+                 }
+            private static void printBiggest(){
+                     System.out.println("I am the biggest of them all!");
+                 }
+            private static void printBiggest(int a){
+                 System.out.println(String.format("%d is bigger", a));
+                 }
+            private static void printBiggest(int a, int b){
+                   if (a > b){
+                       System.out.println(String.format("%d is biggest", a));
+                   }
+                   else {
+                       System.out.println(String.format("%d is biggest", b));
+                   }
+                     }
+            private static void printBiggest(int a, int b, int c){
+                     if (a > b && a > c){
+                         System.out.println(String.format("%d is the biggest", a));
+                     }
+                     else if (b > a && b > c){
+                         System.out.println(String.format("%d is the biggest", b));
+                     }
+                     else {
+                         System.out.println(String.format("%d is the biggest", c));
+                     }
+                     }
+
+                     private static void inputFloatFromUser(Scanner s, String messege){
+                         System.out.println(messege);
+                         float f = s.nextFloat();
+
+                     }
+                        // . create a function that accepts Random as an argument and prints a random number and also gets the min max range as parameters
+                        //                     hint: createRandom(Random r, int min, in max)
+                     private static void createRandom(Random r, int whatIsMin, int whatIsMax ){
+                         int rndom  = r.nextInt(whatIsMax - whatIsMin) + whatIsMin;
+                         System.out.println(rndom);
+
+                     }
+                     private static void printArrayRange(double[] array, double min, double max){
+
+                      for (int index = 0; index < array.length; index++){
+                        if (array[index] >= min && array[index] <= max){
+                            System.out.println(array[index]);
+                                                    }
+                      }
+                     }
+                      public static void main(String[] args) {
+                Scanner s = new Scanner(System.in);
+                Random r = new Random();
+
+                /*
+
+                    . create a function that accepts Random as an argument and prints a random number and also gets the min max range as parameters
+                     hint: createRandom(Random r, int min, in max)
+                 */
+
+                   int a =1;
+                   int b = 3;
+                   int c = 2;
+                   printBiggest(a, b, c);
+
+
+                   inputFloatFromUser(s, "please enter float");
+
+
+                   createRandom(r, 3, 5);
+
+                   double[] arrays ={0.5, -1, 5, -9.6, 7};
+                   printArrayRange(arrays,0.5, 5);
+
+                }
+            }
+
